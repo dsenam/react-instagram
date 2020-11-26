@@ -54,6 +54,11 @@ export const Actions = styled.div`
       margin-right: 10px;
 
   }
+
+  button {
+      background: transparent;
+      border:0;
+  }
 `
   export const Interactions = styled.footer`
     padding-left: 20px;
