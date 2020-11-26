@@ -2,6 +2,7 @@ import React,{useEffect, useState} from 'react';
 
 import { Container, PostList, UserInfo, Actions, PhotoFeed, Interactions } from './styles';
 import api from '../../services/api'
+import io from 'socket.io-client'
 
 import more from '../../assets/more.svg'
 import like from '../../assets/like.svg'
@@ -12,6 +13,7 @@ function Feed() {
     const [feed, setFeed] = useState([])
 
   useEffect(()=> {
+      
       async function loadFeed() {
           const response = await api.get('posts')
 
@@ -19,11 +21,25 @@ function Feed() {
       }
       loadFeed()
   }, [])
+
+  useEffect(()=> {
+    function registerToSocket() {
+        const socket = io('http://localhost:3333')
+  
+        socket.on('post', newPost => {
+            setFeed([newPost, ...feed])
+        })
+  
+        socket.on('like', likedPost => {
+            setFeed(feed.map(post => post.id === likedPost.id ? likedPost : post ))
+        })
+    }
+
+    registerToSocket()
+    
+  }, [feed])
+  
  
-useEffect(() => {
-
-}, [])
-
   async function handleLike(id) {
     await api.post(`/posts/${id}/like`)
   }
