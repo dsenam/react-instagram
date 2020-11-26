@@ -13,7 +13,7 @@ function Feed() {
 
   useEffect(()=> {
       async function loadFeed() {
-          const response = await api.get('Feed')
+          const response = await api.get('posts')
 
           setFeed(response.data)  
       }
