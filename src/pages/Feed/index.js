@@ -1,6 +1,7 @@
-import React from 'react';
+import React,{useEffect, useState} from 'react';
 
 import { Container, PostList, UserInfo, Actions, PhotoFeed, Interactions } from './styles';
+import api from '../../services/api'
 
 import more from '../../assets/more.svg'
 import like from '../../assets/like.svg'
@@ -8,19 +9,31 @@ import comment from '../../assets/comment.svg'
 import send from '../../assets/send.svg'
 
 function Feed() {
+    const [feed, setFeed] = useState([])
+
+  useEffect(()=> {
+      async function loadFeed() {
+          const response = await api.get('Feed')
+
+          setFeed(response.data)  
+      }
+      loadFeed()
+  }, [])
+    
   return (
     <Container>
         <PostList>
-            <article>
+            {feed.map(post => (
+            <article key={post._id}>
                 <UserInfo>
                     <div>
-                        <span>Douglas Sena</span>
-                        <p>Diadema</p>
+                        <span>{post.author}</span>
+                        <p>{post.place}</p>
                     </div>
                     <img src={more} alt="Mais" />
                 </UserInfo>
                 <PhotoFeed>
-                    <img src="https://media-exp1.licdn.com/dms/image/C5603AQEVOnDBLddSPw/profile-displayphoto-shrink_200_200/0?e=1611792000&v=beta&t=78qetKn-1Nnx6590cXUBxkVLnvIzI0N1-GiR6e_suhE" alt="" />
+                    <img src={`http://localhost:3333/files/${post.image}`} alt="" />
                 </PhotoFeed>
                 <Actions>
                     <img src={like} alt="" />
@@ -29,12 +42,13 @@ function Feed() {
                 </Actions>
                 
                 <Interactions>
-                    <strong>900 curtidas</strong>
-                    <p>Um post do Douglas Sena
-                        <span>#react #paixão</span>
+                    <strong>{post.likes} curtidas</strong>
+                    <p>{post.description}
+                        <span>{post.hashtags}</span>
                     </p>
                 </Interactions>
             </article>
+            ))}
         </PostList>
     </Container>
   );
