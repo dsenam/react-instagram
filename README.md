@@ -31,7 +31,11 @@ O layout da aplicação está disponível abaixo:
 </a>
 
 <p align="center" style="display: flex; align-items: flex-start; justify-content: center">
-  <img alt="Made by dsenam" src="https://github.com/dsenam/react-api-crypto/blob/main/src/assets/layout.png">
+  <img alt="Made by dsenam" src="https://github.com/dsenam/react-instagram/blob/main/src/assets/Home.png">
+</p>
+
+<p align="center" style="display: flex; align-items: flex-start; justify-content: center">
+  <img alt="Made by dsenam" src="https://github.com/dsenam/react-instagram/blob/main/src/assets/UploadPage.png">
 </p>
 
 ---
