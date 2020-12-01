@@ -1,70 +1,94 @@
-# Getting Started with Create React App
+<h1 align="center">
+     Instagram Clone
+</h1>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<h3 align="center">
+     Clone do instagram utilizando React.js consumindo API externa cedida gentilmente por um colega.
+</h3>
 
-## Available Scripts
+<h4 align="center">
+	🚧   Concluído 🚀 🚧
+</h4>
 
-In the project directory, you can run:
+# Tabela de conteúdos
 
-### `yarn start`
+<!--ts-->
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+-   [Layout](#-layout)
+-   [Como executar o projeto](#-como-executar-o-projeto)
+    -   [Pré-requisitos](#pré-requisitos)
+    -   [Rodando a aplicação web (Frontend)](#user-content--rodando-a-aplicação-web-frontend)
+-   [Tecnologias](#-tecnologias)
+    -   [WebSite](#user-content-website--react----javascript)
+-   [Autor](#-autor)
+-   [Licença](#user-content--licença)
+<!--te-->
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## 🎨 Layout
 
-### `yarn test`
+O layout da aplicação está disponível abaixo:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+</a>
 
-### `yarn build`
+<p align="center" style="display: flex; align-items: flex-start; justify-content: center">
+  <img alt="Made by dsenam" src="https://github.com/dsenam/react-api-crypto/blob/main/src/assets/layout.png">
+</p>
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+---
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## 🚀 Como executar o projeto
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Pré-requisitos
 
-### `yarn eject`
+Antes de começar, você vai precisar ter instalado em sua máquina as seguintes ferramentas:
+[Git](https://git-scm.com), [Node.js](https://nodejs.org/en/).
+Além disto é bom ter um editor para trabalhar com o código como [VSCode](https://code.visualstudio.com/)
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+#### 🧭 Rodando a aplicação web (Frontend)
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+```bash
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+# Clone este repositório
+$ git clone https://github.com/dsenam/react-instagram
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+# Acesse a pasta do projeto no seu terminal/cmd
+$ cd react-instagram
 
-## Learn More
+# Instale as dependências
+$ yarn
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+# Execute a aplicação em modo de desenvolvimento
+$ yarn start
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+# A aplicação será aberta na porta:3000 - acesse http://localhost:3000
 
-### Code Splitting
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+---
 
-### Analyzing the Bundle Size
+## 🛠 Tecnologias
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+As seguintes ferramentas foram usadas na construção do projeto:
 
-### Making a Progressive Web App
+#### **Website** ([React](https://reactjs.org/) + [Javascript](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript))
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+-   **React Router Dom**
+-   **Axios**
+-   **React Router**
+-   **Styled Components**
+-   **Socket.io**
 
-### Advanced Configuration
+## 🦸 Autor
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+<sub><b>Douglas Sena</b></sub></a>
+<br />
 
-### Deployment
+![Linkedin Badge](https://img.shields.io/badge/-Douglas-blue?style=flat-square&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/douglassena/)(https://www.linkedin.com/in/douglassena/)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+---
 
-### `yarn build` fails to minify
+## 📝 Licença
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Este projeto esta sobe a licença [MIT](./LICENSE).
+
+Feito com ❤️ por Douglas Sena 👋🏽 [Entre em contato!](https://www.linkedin.com/in/douglassena/)

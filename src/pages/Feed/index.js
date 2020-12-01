@@ -24,20 +24,20 @@ function Feed() {
 
   useEffect(()=> {
     function registerToSocket() {
-        const socket = io('http://localhost:3333')
+        const socket = io('http://localhost:3333/')
   
         socket.on('post', newPost => {
             setFeed([newPost, ...feed])
         })
   
         socket.on('like', likedPost => {
-            setFeed(feed.map(post => post.id === likedPost.id ? likedPost : post ))
+            setFeed(feed.map(post => post._id === likedPost.id ? likedPost : post ))
         })
     }
 
     registerToSocket()
     
-  }, [feed])
+  },[feed] )
   
  
   async function handleLike(id) {
